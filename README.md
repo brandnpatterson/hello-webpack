@@ -31,21 +31,6 @@ As you change files in the `src` folder, you will see changes reflected in the b
 ### New Files
 When adding new files, restart your server so that the new files will be watched
 
-## Using a Proxy
-
-To add a proxy to browser sync, first create the proxy on your local machine. Next replace the `server` property with the `proxy` property and define your proxy.
-
-```
-let localhost = 'hello-webpack.localhost';
-
-browserSync.init({
-    proxy: localhost,
-    // server: {
-    //     baseDir: './'
-    // }
-});
-```
-
 ## Built With
 
 * [Babel](https://babeljs.io/) - Compiles JS ES6 to ES5
