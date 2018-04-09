@@ -1,6 +1,6 @@
 # Hello Webpack
 
-Development environment that preprocesses styles, bundles scripts, watches for file changes, and uses live reload all with Webpack and Webpack Dev Server
+Development environment that preprocesses styles, bundles scripts, and watches files to live reload all with Webpack and Webpack Dev Server
 
 ### Getting Started
 
@@ -48,11 +48,9 @@ browserSync.init({
 
 ## Built With
 
-* [Gulp](https://gulpjs.com/) - Task runner
-* [BrowserSync](https://browsersync.io/) - Local server
-* [Sass](https://sass-lang.com/) - SCSS partials
 * [Babel](https://babeljs.io/) - Compiles JS ES6 to ES5
 * [Webpack](https://webpack.js.org/) - Bundles JS files
+* [Webpack Dev Server](https://github.com/webpack/webpack-dev-server) - Local Node Server for Webpack
 * [Stylelint](https://stylelint.io/) - Lints CSS / SCSS files
 * [ESLint](https://eslint.org/) - Lints JS files
 
