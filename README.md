@@ -22,7 +22,7 @@ And run npm start
 npm start
 ```
 
-You will see 'Hello Webpack' open at localhost:3000
+Open localhost:3000 and you will see 'Hello Webpack' in your browser.
 
 ## Live Reload
 
