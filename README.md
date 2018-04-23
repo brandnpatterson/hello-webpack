@@ -16,10 +16,10 @@ then run
 npm install
 ```
 
-And run gulp's default task
+And run npm start
 
 ```
-gulp
+npm start
 ```
 
 You will see 'Hello Webpack' open at localhost:3000
