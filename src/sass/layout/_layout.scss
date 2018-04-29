@@ -24,3 +24,11 @@
   right: -17%;
   top: 0;
 }
+
+
+.edit-mode,
+.btn-delete,
+.btn-confirm {
+  background: $error;
+  color: $white;
+}

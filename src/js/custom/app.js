@@ -76,13 +76,16 @@ class Todos {
         btnDelete.map(checkbox => {
             checkbox.classList.toggle('hidden');
         });
+
+        this.btnEdit.classList.toggle('edit-mode');
     }
 
     delete(e) {
-        let confirm = e.target.parentNode.lastChild.previousSibling;
-        if (confirm.classList.contains('btn-confirm')) {
-            confirm.classList.toggle('hidden');
-        }
+        Array.from(e.target.parentNode.childNodes).map(child => {
+            if (child.classList && child.classList.contains('btn-confirm')) {
+                child.classList.toggle('hidden');
+            }
+        });
     }
 
     confirmDelete(e) {
