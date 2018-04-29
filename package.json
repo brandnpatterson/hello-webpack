@@ -1,7 +1,7 @@
 {
-  "name": "crud-todo-list",
+  "name": "hello-webpack",
   "version": "1.0.0",
-  "description": "crud-todo-list",
+  "description": "hello-webpack",
   "author": "Brandon Patterson",
   "license": "MIT",
   "scripts": {
@@ -36,6 +36,6 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/brandnpatterson/crud-todo-list.git"
+    "url": "https://github.com/brandnpatterson/hello-webpack.git"
   }
 }

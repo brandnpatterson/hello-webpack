@@ -5,6 +5,7 @@ let HtmlWebpackPlugin = require('html-webpack-plugin');
 let StyleLintPlugin = require('stylelint-webpack-plugin');
 let autoprefixer = require('autoprefixer');
 let isProd = process.env.NODE_ENV === 'production';
+let htmlTitle = 'Hello Webpack';
 
 let cssDev = [
     {
@@ -115,7 +116,7 @@ module.exports = {
             filename: 'index.html',
             hash: true,
             template: path.join(__dirname, '/src/') + 'template.html',
-            title: 'To Do List',
+            title: htmlTitle,
         }),
         new ExtractTextPlugin({
             filename: 'style.css',

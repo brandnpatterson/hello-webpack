@@ -1,34 +1,3 @@
-.wrapper {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.hidden {
-  display: none;
-}
-
-.edit-todo {
-  text-align: right;
-}
-
-.todo {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-}
-
-.btn-confirm {
-  position: absolute;
-  right: -17%;
-  top: 0;
-}
-
-
-.edit-mode,
-.btn-delete,
-.btn-confirm {
-  background: $error;
-  color: $white;
+body {
+  background: $teal;
 }
