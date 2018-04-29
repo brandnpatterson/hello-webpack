@@ -2,14 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Hello Webpack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="style.css" rel="stylesheet" />
+    <title>To Do List</title>
 </head>
 <body>
-    <h2>Hello Webpack</h2>
-    <script type="text/javascript" src="bundle.js"></script>
+    <main class="wrapper">
+        <header class="header">
+            <h1>To Do List</h1>
+        </header>
+        <div class="todo-list-wrapper">
+            <div class="todo-list">
+                <div class="edit-todo">
+                    <input class="btn btn-edit" type="button" value="Edit">
+                </div>
+                <div class="todo">
+                    <input class="hidden btn btn-delete" type="button" value="X">
+                    <input class="todo-checkbox" type="checkbox">
+                    <input type="text" name="todo" value="Watch Avengers" />
+                    <input class="hidden btn btn-confirm" type="button" value="√">
+                </div>
+                <div class="todo">
+                    <input class="hidden btn btn-delete" type="button" value="X">
+                    <input class="todo-checkbox" type="checkbox">
+                    <input type="text" name="todo" value="Watch Captain Marvel" />
+                    <input class="hidden btn btn-confirm" type="button" value="√">
+                </div>
+            </div>
+            <div class="todo create-todo">
+                <input class="btn btn-create" type="button" value="+">
+                <input class="input-create" type="text" name="create">
+            </div>
+        </div>
+    </main>
+    <script src="bundle.js"></script>
 </body>
 </html>
+

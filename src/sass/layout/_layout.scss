@@ -1,4 +1,25 @@
-body {
-  background: $teal;
-  color: $black;
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.edit-todo {
+  text-align: right;
+}
+
+.todo {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.btn-confirm {
+  position: absolute;
+  right: -24px;
 }

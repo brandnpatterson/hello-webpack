@@ -8,7 +8,6 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, '/public'),
         compress: true,
-        port: 3000,
         stats: 'errors-only',
         watchContentBase: true,
     },
@@ -23,13 +22,19 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: [{
+                use: {
                     loader: 'babel-loader',
-                    loader: 'eslint-loader',
                     options: {
-                        presets: 'env'
+                        presets: ['@babel/preset-env']
                     }
-                }]
+                }
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'eslint-loader'
+                }
             },
             {
                 test: /\.scss$/,
@@ -49,7 +54,7 @@ module.exports = {
                             options: {
                                 plugins() {
                                     return autoprefixer({
-                                        browsers: 'last 3 versions'
+                                        browsers: 'last 2 versions'
                                     });
                                 },
                                 sourceMap: true
