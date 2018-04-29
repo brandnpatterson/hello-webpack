@@ -74,6 +74,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, '/public/'),
         compress: true,
+        open: true,
         stats: 'errors-only',
         watchContentBase: true,
     },
