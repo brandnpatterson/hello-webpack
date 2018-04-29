@@ -2,7 +2,7 @@
 
 1. Development environment that uses Webpack to generate html, bundle preprocessed styles, scripts, and watch files in order to live hot reload with Webpack Dev Server. 
 
-2.Production environment that uses Extract Text Webpack Plugin to generate a CSS file and minifies all files.
+2. Production environment that uses Extract Text Webpack Plugin to generate a CSS file and minifies all files.
 
 ### Prerequisites
 
