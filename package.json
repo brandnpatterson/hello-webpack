@@ -5,8 +5,7 @@
   "author": "Brandon Patterson",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "webpack": "webpack --mode development"
+    "start": "webpack-dev-server --mode development --hot"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.46",

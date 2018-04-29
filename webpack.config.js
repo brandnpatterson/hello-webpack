@@ -1,8 +1,40 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
-const autoprefixer = require('autoprefixer');
+let path = require('path');
+let webpack = require('webpack');
+// let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let StyleLintPlugin = require('stylelint-webpack-plugin');
+let autoprefixer = require('autoprefixer');
+
+// let cssProd = ExtractTextPlugin.extract({
+//     disable: true,
+//     fallback: 'style-loader',
+//     use: [
+//         {
+//             loader: 'css-loader',
+//             options: {
+//                 url: false,
+//                 minimize: true,
+//                 sourceMap: true
+//             }
+//         },
+//         {
+//             loader: 'postcss-loader',
+//             options: {
+//                 plugins() {
+//                     return autoprefixer({
+//                         browsers: 'last 2 versions'
+//                     });
+//                 },
+//                 sourceMap: true
+//             }
+//         },
+//         {
+//             loader: 'sass-loader',
+//             options: {
+//                 sourceMap: true
+//             }
+//         }
+//     ]
+// });
 
 module.exports = {
     devServer: {
@@ -38,41 +70,40 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                url: false,
-                                minimize: true,
-                                sourceMap: true
-                            }
-                        },
-                        {
-                            loader: 'postcss-loader',
-                            options: {
-                                plugins() {
-                                    return autoprefixer({
-                                        browsers: 'last 2 versions'
-                                    });
-                                },
-                                sourceMap: true
-                            }
-                        },
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                sourceMap: true
-                            }
+                use: [
+                    {
+                        loader: 'style-loader',
+                    }, {
+                        loader: 'css-loader',
+                        options: {
+                            url: false,
+                            minimize: true,
+                            sourceMap: true
                         }
-                    ]
-                })
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins() {
+                                return autoprefixer({
+                                    browsers: 'last 2 versions'
+                                });
+                            },
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ]
             },
         ],
     },
     plugins: [
-        new ExtractTextPlugin('style.css'),
+        // new ExtractTextPlugin('style.css'),
         new StyleLintPlugin({
             files: './src/sass/**/*.scss',
             syntax: 'scss'

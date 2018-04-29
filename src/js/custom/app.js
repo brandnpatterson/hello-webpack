@@ -80,6 +80,7 @@ class Todos {
 
     delete(e) {
         let confirm = e.target.parentNode.lastChild.previousSibling;
+        console.log(confirm);
         if (confirm.classList.contains('btn-confirm')) {
             confirm.classList.toggle('hidden');
         }
