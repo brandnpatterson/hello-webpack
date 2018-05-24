@@ -1,5 +1,9 @@
 .env
 .DS_Store
-node_modules/
 *.css.map
 *.js.map
+node_modules/
+public/*.css
+public/*.html
+public/*.js
+public/*.map
