@@ -27,7 +27,6 @@
                         aria-expanded="false">Live Reload</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="#newfiles">New Files</a>
-                        <a class="dropdown-item" href="#proxy">Proxy</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -77,9 +76,6 @@
                         <ul>
                             <li class="toc-entry toc-h3">
                                 <a href="#newfiles">New Files</a>
-                            </li>
-                            <li class="toc-entry toc-h3">
-                                <a href="#proxy">Proxy</a>
                             </li>
                         </ul>
                     </li>
@@ -172,30 +168,9 @@
                         
                         <p>As you change files in the src folder, you will see changes reflected in the browser.</p>
 
-                        <div class="container">
-                            <h3 name="newfiles" id="newfiles">New Files</h3>
+                        <h3 name="newfiles" id="newfiles">New Files</h3>
                             
-                            <p>When adding new files, restart your server so that the new files will be watched.</p>
-                            
-                            <h3 name="proxy" id="proxy">Proxy</h3>
-                            
-                            <p>If using Apache, you can use a proxy by editing your httpd-vhosts.conf file</p>
-                            <div class="highlight">
-                                <pre>
-                                    <code>
-&lt;VirtualHost *:80&gt;
-    ServerName hello-webpack.localhost
-
-    ProxyPass / http://localhost:8080/
-    ProxyPassReverse / http://localhost:8080/
-
-    ProxyPassMatch ^\/api\/.+$ http://php-application/
-    ProxyPassReverse / http://php-application/
-&lt;/VirtualHost&gt;
-                                    </code>
-                                </pre>
-                        </div>
-                        </div>
+                        <p>When adding new files, restart your server so that the new files will be watched.</p>
                     </div>
                     <br>
                     <hr>
