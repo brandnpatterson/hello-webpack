@@ -62,4 +62,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* **Billie Thompson** - *README template* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Billie Thompson** - [README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) - [PurpleBooth](https://github.com/PurpleBooth)

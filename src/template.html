@@ -4,14 +4,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <main class="wrapper">
-        <header class="header">
-            <h1>Hello Webpack</h1>
-        </header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">
+            <img class="icon" src="images/webpack.png" alt="Webpack Icon">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-container collapse navbar-collapse" id="navbar-container">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="active nav-link" href="#prerequisites">Prerequisites</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-href="#livereload" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Live Reload</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#newfiles">New Files</a>
+                        <a class="dropdown-item" href="#proxy">Proxy</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-href="#builtwith" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Built With</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown02">
+                        <a class="dropdown-item" href="#babel">Babel</a>
+                        <a class="dropdown-item" href="#webpack">Webpack</a>
+                        <a class="dropdown-item" href="#webpackdevserver">Webpack Dev Server</a>
+                        <a class="dropdown-item" href="#styelint">Styleint</a>
+                        <a class="dropdown-item" href="#eslint">Eslint</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto navbar-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="#authors">Authors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#license">License</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aknowledgements">Acknowledgments</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main role="main">
+        <div class="container">
+            <div class="row section hero-section">
+                <div class="col-sm-12 col-md-10">
+                    <h1 class="display-5">Hello, Webpack!</h1>
+                    <p>Development environment that generates html, bundles preprocessed styles, scripts, and watch files in order to live hot reload
+                        with Webpack Dev Server.</p>
+                    <p>Production environment that uses Extract Text Webpack Plugin to generate a CSS file and minifies all files.</p>
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
+                    </p>
+                </div>
+            </div>
+            <div class="d-none d-xl-block col-xl-2 bd-toc sidebar">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a class="active" href="#prerequisites">Prerequisites</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#livereload">Live Reload</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#newfiles">New Files</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#proxy">Proxy</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#builtwith">Built With</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#babel">Babel</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#webpack">Webpack</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#webpackdevserver">Dev Server</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#stylelint">Stylelint</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#eslint">Eslint</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#authors">Authors</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#license">License</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#aknowledgements">Acknowledgments</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-10">
+                    <div class="section">
+                        <h2 name="prerequisites" id="prerequisites">Prerequisites</h2>
+                        <br>
+                        <p>Start by cloning this repo, then run</p>
+                        
+                        <figure class="highlight">
+                            <pre><code>cd hello-webpack</code></pre>
+                        </figure>
+                        
+                        <p>then</p>
+                        
+                        <figure class="highlight">
+                            <pre><code>npm install</code></pre>
+                        </figure>
+                        
+                        <p>and finally</p>
+                        
+                        <figure class="highlight">
+                            <pre><code>npm start</code></pre>
+                        </figure>
+                        
+                        <p>Open localhost:8080 and you will see 'Hello Webpack' in your browser.</p>
+                        <br>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <h2 name="livereload" id="livereload">Live Reload</h2>
+                        
+                        <p>As you change files in the src folder, you will see changes reflected in the browser.</p>
+
+                        <div class="container">
+                            <h3 name="newfiles" id="newfiles">New Files</h3>
+                            
+                            <p>When adding new files, restart your server so that the new files will be watched.</p>
+                            
+                            <h3 name="proxy" id="proxy">Proxy</h3>
+                            
+                            <p>If using Apache, you can use a proxy by editing your httpd-vhosts.conf file</p>
+                            <div class="highlight">
+                                <pre>
+                                    <code>
+&lt;VirtualHost *:80&gt;
+    ServerName hello-webpack.localhost
+
+    ProxyPass / http://localhost:8080/
+    ProxyPassReverse / http://localhost:8080/
+
+    ProxyPassMatch ^\/api\/.+$ http://php-application/
+    ProxyPassReverse / http://php-application/
+&lt;/VirtualHost&gt;
+                                    </code>
+                                </pre>
+                        </div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <div class="section">
+                        <h2 name="builtwith" id="builtwith">Built With</h2>
+                        <ul>
+                            <li name="babel" id="babel">
+                                <a href="https://babeljs.io/" target="_blank">Babel</a> - Compiles JS ES6 to ES5
+                            </li>
+                            <li name="webpack" id="webpack">
+                                <a href="https://webpack.js.org/" target="_blank">Webpack</a> - Bundles files
+                            </li>
+                            <li name="webpackdevserver" id="webpackdevserver">
+                                <a href="https://github.com/webpack/webpack-dev-server" target="_blank">Webpack Dev Server</a> - Local Node Server for Webpack
+                            </li>
+                            <li name="stylelint" id="stylelint">
+                                <a href="https://stylelint.io/" target="_blank">Stylelint</a> - Lints CSS / SCSS files
+                            </li>
+                            <li name="eslint" id="eslint">
+                                <a href="https://eslint.org/" target="_blank">ESLint</a> - Lints JS files
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <h2 name="authors" id="authors">Authors</h2>
+                        <ul>
+                            <li>
+                                <strong>Brandon Patterson</strong> -
+                                <em>Initial work</em> -
+                                <a href="https://github.com/brandnpatterson">brandnpatterson</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <h2 name="license" id="license">License</h2>
+                        <p>This project is licensed under the MIT License - see the
+                            <a href="https://github.com/brandnpatterson/hello-webpack/blob/master/LICENSE.md" target="_blank">LICENSE.md</a> file for details</p>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <h2 name="acknowledgments" id="acknowledgments">Acknowledgments</h2>
+                        <ul>
+                            <li>
+                                <strong>Billie Thompson</strong> -
+                                <a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2" target="_blank">README Template</a> - <a href="https://github.com/PurpleBooth" target="_blank">PurpleBooth Github</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <a href="https://github.com/brandnpatterson">
+                &copy;&nbsp;
+                <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script> &nbsp;Brandon Patterson
+            </a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
 </html>
 
