@@ -1,8 +1,8 @@
 # Hello Webpack
 
-This is a development environment that uses Webpack to generate html, bundle preprocessed styles, scripts, and watch files that live reload with Webpack Dev Server.
+This is a development environment that uses Webpack to generate html, bundle preprocessed scripts / styles, and watch files to reloaded with Webpack Dev Server.
 
-It also includes a production environment that uses Extract Text Webpack Plugin to generate a CSS file and minifies all files.
+It also includes a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
 
 ## Prerequisites
 
