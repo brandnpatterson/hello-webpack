@@ -26,7 +26,7 @@ finally
 npm start
 ```
 
-Open localhost:8080 and you will see 'Hello Webpack' in your browser.
+Open localhost:8080 and you will see 'Hello, Webpack' in your browser.
 
 ## Other Commands
 

@@ -1,5 +1,4 @@
-import 'babel-polyfill';
-
+// if using jquery with a CDN
 let $ = window.$;
 
 let $sectionAnchors = $('.section-nav a');
