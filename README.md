@@ -10,7 +10,7 @@ jQuery and Bootstrap are also included through a CDN, but are not the focus of t
 
 ## Prerequisites
 
-Start by cloning this repo, then run
+Start by cloning this repo, and run
 
 ```
 cd hello-webpack
@@ -51,9 +51,6 @@ npm run clean
 ## Live Reload
 
 As you change files in the src folder, you will see changes reflected in the browser.
-
-### New Files
-When adding new files, restart your server so that the new files will be watched.
 
 ## Built With
 
