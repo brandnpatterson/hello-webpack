@@ -21,25 +21,28 @@ then
 ```
 npm install
 ```
-finally
+and start the dev server
 ```
 npm start
 ```
 
 Open localhost:8080 and you will see 'Hello, Webpack' in your browser.
 
-## Other Commands
+## Commands
 
+Use this command before deploying it to production. I used [Surge](https://surge.sh/)
 ```
 npm run prod
 ```
-Use this command before deploying it to production. I used [Surge](https://surge.sh/)
+Use this to start the dev server
+```
+npm start
+```
 
+This is used with the other commands to remove build files
 ```
 npm run clean
 ```
-This is used with the other commands to remove build files
-
 
 ## Live Reload
 

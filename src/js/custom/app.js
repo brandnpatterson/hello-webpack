@@ -1,44 +1,99 @@
 // if using jquery with a CDN
 let $ = window.$;
 
-let $sectionAnchors = $('.section-nav a');
-let $navAnchors = $('#navbar-container a');
-let $navbarContainer = $('.navbar-container');
-let activeVal = $('.active-link').attr('href');
+class App {
+    constructor() {
+        this.$activeElement = null;
+    }
 
-const listen = element => {
-    element.on('click', e => {
-        // assign active value from child anchor, not dropdown parent
-        if (!$(e.target).hasClass('dropdown-toggle')) {
-            activeVal = $(e.target).attr('href');
+    cacheDOM() {
+        this.$sidebar = $('.sidebar-nav a');
+        this.$navbar = $('#navbar-container a');
+    }
 
-            // remove dropdown on mobile selection
-            if ($navbarContainer.hasClass('show')) {
-                $navbarContainer.removeClass('show');
-            }
-        }
+    init() {
+        this.cacheDOM();
 
-        $sectionAnchors.map((i, a) => {
-            if ($(a).attr('href') === activeVal) {
-                $(a).addClass('active');
-            } else {
-                $(a).removeClass('active');
-            }
-        });
+        let { $navbar, $sidebar } = this;
 
-        $navAnchors.map((i, n) => {
-            if ($(n).attr('href') === activeVal || $(n).parent().prev().data('href') === activeVal) {
-                $(n).addClass('active');
-                if ($(n).parent().hasClass('dropdown-menu')) {
-                    $(n).parent().prev().addClass('active');
+        this.onClick($navbar);
+        this.onClick($sidebar);
+        this.onScroll();
+    }
+
+    onClick(element) {        
+        let $activeVal = $('.active-link').attr('href');
+        let $navbarContainer = $('.navbar-container');
+
+        element.on('click', e => {
+            this.$activeElement = $(e.target);
+            // assign active value from child anchor, not dropdown parent
+            if (!$(e.target).hasClass('dropdown-toggle')) {
+                $activeVal = $(e.target).attr('href');
+
+                // remove dropdown on mobile selection
+                if ($navbarContainer.hasClass('show')) {
+                    $navbarContainer.removeClass('show');
                 }
-                $(n).siblings().removeClass('active');
+            }
+
+            this.$navbar.map((i, anchor) => {
+                let $anchor = $(anchor);
+
+                if (this.$activeElement.is('img')) {
+                    $anchor.removeClass('active');
+                } else if ($anchor.attr('href') === $activeVal || $anchor.parent().prev().data('href') === $activeVal) {
+                    $anchor.addClass('active');
+                    $anchor.siblings().removeClass('active');
+                    if ($anchor.parent().hasClass('dropdown-menu')) {
+                        $anchor.parent().prev().addClass('active');
+                    }
+                } else {
+                    $anchor.removeClass('active');
+                }
+            });
+
+            this.$sidebar.map((i, anchor) => {
+                let $anchor = $(anchor);
+
+                if (this.$activeElement.is('img')) {
+                    $anchor.removeClass('active');
+                } else if ($activeVal === $anchor.attr('href')) {
+                    $anchor.addClass('active');
+                } else {
+                    $anchor.removeClass('active');
+                }
+            });
+        });
+    }
+
+    onScroll() {
+        $(document).on('scroll', () => {
+            let activeElement = this.$activeElement;
+
+            if (activeElement) {
+                if (activeElement.hasClass('nav-link') || activeElement.parent().hasClass('toc-entry')) {
+                    activeElement = null;
+                }
             } else {
-                $(n).removeClass('active');
+                // at top remove active class from all nav items
+                $('nav a.active').removeClass('active');
+                $('.sidebar-nav a.active').removeClass('active');
+
+                $('main .section').map((i, section) => {
+                    if ($(section).position().top <= $(document).scrollTop() - 200) {
+                        // navbar
+                        $('nav a.active').removeClass('active');
+                        $('nav a').eq(i).addClass('active');
+
+                        // sidebar
+                        $('.sidebar-nav a.active').removeClass('active');
+                        $('.sidebar-nav a').eq(i).addClass('active');
+                    }
+                });
             }
         });
-    });
-};
-
-listen($sectionAnchors);
-listen($navAnchors);
+    }
+}
+let app = new App;
+app.init();

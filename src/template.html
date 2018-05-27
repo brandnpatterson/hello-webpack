@@ -20,17 +20,16 @@
         <div class="navbar-container collapse navbar-collapse" id="navbar-container">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="active nav-link" href="#prerequisites">Prerequisites</a>
+                    <a class="nav-link" href="#prerequisites">Prerequisites</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#commands">Commands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#livereload">Live Reload</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-href="#livereload" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">Live Reload</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#newfiles">New Files</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-href="#builtwith" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true"
+                    <a class="nav-link dropdown-toggle" data-href="#builtwith" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">Built With</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown02">
                         <a class="dropdown-item" href="#babel">Babel</a>
@@ -49,7 +48,7 @@
                     <a class="nav-link" href="#license">License</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#aknowledgements">Acknowledgments</a>
+                    <a class="nav-link" href="#acknowledgements">Acknowledgments</a>
                 </li>
             </ul>
         </div>
@@ -59,8 +58,11 @@
             <div class="row section hero-section">
                 <div class="col-sm-12 col-md-10">
                     <h1 class="display-5">Hello, Webpack!</h1>
+                    <br>
+                    <br>
                     <p>This is a development environment that uses Webpack to generate html, bundle preprocessed scripts / styles, and watch files to reloaded with Webpack Dev Server.</p>
                     <p>It also includes a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.</p>
+                    <br>
                     <br>
                     <p>
                         <a class="btn btn-primary btn-lg" href="https://github.com/brandnpatterson/hello-webpack" target="_blank" role="button">Github Repo &raquo;</a>
@@ -68,17 +70,20 @@
                 </div>
             </div>
             <div class="d-none d-xl-block col-xl-2 bd-toc sidebar">
-                <ul class="section-nav">
+                <ul class="sidebar-nav">
                     <li class="toc-entry toc-h2">
-                        <a class="active" href="#prerequisites">Prerequisites</a>
+                        <a class="navbar-brand" href="#">
+                            <img class="icon" src="images/webpack.png" alt="Webpack Icon">
+                        </a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#prerequisites">Prerequisites</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#commands">Commands</a>
                     </li>
                     <li class="toc-entry toc-h2">
                         <a href="#livereload">Live Reload</a>
-                        <ul>
-                            <li class="toc-entry toc-h3">
-                                <a href="#newfiles">New Files</a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="toc-entry toc-h2">
                         <a href="#builtwith">Built With</a>
@@ -107,7 +112,7 @@
                         <a href="#license">License</a>
                     </li>
                     <li class="toc-entry toc-h2">
-                        <a href="#aknowledgements">Acknowledgments</a>
+                        <a href="#acknowledgements">Acknowledgments</a>
                     </li>
                 </ul>
             </div>
@@ -116,7 +121,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-10">
                     <div class="section">
-                        <h2 name="prerequisites" id="prerequisites">Prerequisites</h2>
+                        <h2 id="prerequisites">Prerequisites</h2>
                         <br>
                         <p>Start by cloning this repo, then run</p>
                         
@@ -136,7 +141,7 @@
                             <pre><code>npm install</code></pre>
                         </figure>
                         
-                        <p>and finally</p>
+                        <p>and start the dev server</p>
                         
                         <figure class="highlight">
                             <pre><code>npm start</code></pre>
@@ -147,26 +152,33 @@
                     </div>
                     <hr>
                     <div class="section">
-                        <h2 id="othercommands">Other Commands</h2>
+                        <h2 id="commands">Commands</h2>
+
+                        <p>Use this to start the dev server</p>
+
+                        <figure class="highlight">
+                            <pre><code>npm start</code></pre>
+                        </figure>
+
+                         <p>
+                            Use this command before deploying it to production. I used
+                            <a href="https://surge.sh/">Surge.sh</a>
+                        </p>
 
                         <figure class="highlight">
                             <pre><code>npm run prod</code></pre>
                         </figure>
 
-                        <p>Use this command before deploying it to production. I used
-                            <a href="https://surge.sh/">Surge.sh</a>
-                        </p>
+                        <p>This is used with the other commands to remove build files</p>
 
                         <figure class="highlight">
                             <pre><code>npm run clean</code></pre>
                         </figure>
-
-                        <p>This is used with the other commands to remove build files</p>
                     </div>
                     <br>
                     <hr>
                     <div class="section">
-                        <h2 name="livereload" id="livereload">Live Reload</h2>
+                        <h2 id="livereload">Live Reload</h2>
                         
                         <p>As you change files in the src folder, you will see changes reflected in the browser.</p>
 
@@ -177,28 +189,28 @@
                     <br>
                     <hr>
                     <div class="section">
-                        <h2 name="builtwith" id="builtwith">Built With</h2>
+                        <h2 id="builtwith">Built With</h2>
                         <ul>
-                            <li name="babel" id="babel">
+                            <li id="babel">
                                 <a href="https://babeljs.io/" target="_blank">Babel</a> - Compiles JS ES6 to ES5
                             </li>
-                            <li name="webpack" id="webpack">
+                            <li id="webpack">
                                 <a href="https://webpack.js.org/" target="_blank">Webpack</a> - Bundles files
                             </li>
-                            <li name="webpackdevserver" id="webpackdevserver">
+                            <li id="webpackdevserver">
                                 <a href="https://github.com/webpack/webpack-dev-server" target="_blank">Webpack Dev Server</a> - Local Node Server for Webpack
                             </li>
-                            <li name="stylelint" id="stylelint">
+                            <li id="stylelint">
                                 <a href="https://stylelint.io/" target="_blank">Stylelint</a> - Lints CSS / SCSS files
                             </li>
-                            <li name="eslint" id="eslint">
+                            <li id="eslint">
                                 <a href="https://eslint.org/" target="_blank">ESLint</a> - Lints JS files
                             </li>
                         </ul>
                     </div>
                     <hr>
                     <div class="section">
-                        <h2 name="authors" id="authors">Authors</h2>
+                        <h2 id="authors">Authors</h2>
                         <ul>
                             <li>
                                 <strong>Brandon Patterson</strong> -
@@ -209,13 +221,13 @@
                     </div>
                     <hr>
                     <div class="section">
-                        <h2 name="license" id="license">License</h2>
+                        <h2 id="license">License</h2>
                         <p>This project is licensed under the MIT License - see the
                             <a href="https://github.com/brandnpatterson/hello-webpack/blob/master/LICENSE.md" target="_blank">LICENSE.md</a> file for details</p>
                     </div>
                     <hr>
                     <div class="section">
-                        <h2 name="acknowledgments" id="acknowledgments">Acknowledgments</h2>
+                        <h2 id="acknowledgements">Acknowledgments</h2>
                         <ul>
                             <li>
                                 <strong>Billie Thompson</strong> -
