@@ -9,7 +9,7 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">
             <img class="icon" src="images/webpack.png" alt="Webpack Icon">
         </a>
@@ -28,15 +28,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#livereload">Live Reload</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li id="builtwith-options" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-href="#builtwith" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">Built With</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown02">
                         <a class="dropdown-item" href="#babel">Babel</a>
                         <a class="dropdown-item" href="#webpack">Webpack</a>
                         <a class="dropdown-item" href="#webpackdevserver">Webpack Dev Server</a>
-                        <a class="dropdown-item" href="#styelint">Styleint</a>
                         <a class="dropdown-item" href="#eslint">Eslint</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#sass">Sass</a>
+                        <a class="dropdown-item" href="#autoprefixer">Autoprefixer</a>
+                        <a class="dropdown-item" href="#styelint">Styleint</a>
                     </div>
                 </li>
             </ul>
@@ -82,10 +85,16 @@
                         <a href="#webpackdevserver">Dev Server</a>
                     </li>
                     <li class="toc-entry toc-h3">
-                        <a href="#stylelint">Stylelint</a>
+                        <a href="#eslint">Eslint</a>
                     </li>
                     <li class="toc-entry toc-h3">
-                        <a href="#eslint">Eslint</a>
+                        <a href="#sass">Sass</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#autoprefixer">Autoprefixer</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#stylelint">Stylelint</a>
                     </li>
                 </ul>
             </li>
@@ -109,21 +118,17 @@
                         <p>
                             This is a development environment that uses <a href="https://webpack.js.org/" target="_blank">Webpack</a> to generate html, bundle preprocessed scripts / styles, and watch files to reloaded with <a href="https://github.com/webpack/webpack-dev-server" target="_blank">Webpack Dev Server</a>.</p>
                         <p>
-                            It also includes a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
+                            This also contains a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
+                        </p>
+                        <p>
+                            Other core tools included are <a href="https://stylelint.io/" target="_blank">Stylelint</a> and <a href="https://eslint.org/" target="_blank">ESLint.</a>
+                        <p>
+                            jQuery and Bootstrap are also included through a CDN, but are not the focus of this dev env.
                         </p>
                     </div>
                     <p>
                         <a class="btn btn-primary btn-lg" href="https://github.com/brandnpatterson/hello-webpack" target="_blank" role="button">Github Repo &raquo;</a>
                     </p>
-                </div>
-                <div class="col-sm-12 col-md-10">
-                    <div class="text-area">
-                        <p>
-                            Other core tools included are <a href="https://stylelint.io/" target="_blank">Stylelint</a> and <a href="https://eslint.org/" target="_blank">ESLint.</a>
-                        <p>
-                            jQuery and Bootstrap are also included via CDN, but are not the focus of this dev environment. Feel free to use them or remove them as you go!
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -197,22 +202,35 @@
                     </div>
                     <hr>
                     <div class="section">
+                        <span id="babel"></span>
+                        <span id="webpack"></span>
+                        <span id="webpackdevserver"></span>
+                        <span id="eslint"></span>
+                        <span id="sass"></span>
+                        <span id="autoprefixer"></span>
+                        <span id="stylelint"></span>
                         <h2 id="builtwith">Built With</h2>
                         <ul>
-                            <li id="babel">
+                            <li>
                                 <a href="https://babeljs.io/" target="_blank">Babel</a> - Compiles JS ES6 to ES5
                             </li>
-                            <li id="webpack">
+                            <li>
                                 <a href="https://webpack.js.org/" target="_blank">Webpack</a> - Bundles files
                             </li>
-                            <li id="webpackdevserver">
+                            <li>
                                 <a href="https://github.com/webpack/webpack-dev-server" target="_blank">Webpack Dev Server</a> - Local Node Server for Webpack
                             </li>
-                            <li id="stylelint">
-                                <a href="https://stylelint.io/" target="_blank">Stylelint</a> - Lints CSS / SCSS files
-                            </li>
-                            <li id="eslint">
+                            <li>
                                 <a href="https://eslint.org/" target="_blank">ESLint</a> - Lints JS files
+                            </li>
+                            <li>
+                                <a href="https://sass-lang.com/" target="_blank">Sass</a> - CSS with superpowers
+                            </li>
+                            <li>
+                                <a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a> - adds vendor prefixes to CSS rules 
+                            </li>
+                            <li>
+                                <a href="https://stylelint.io/" target="_blank">Stylelint</a> - Lints CSS / SCSS files
                             </li>
                         </ul>
                     </div>                    

@@ -1,4 +1,4 @@
-// if using jquery with a CDN
+// if using jquery through a CDN
 let $ = window.$;
 
 class Nav {
@@ -15,11 +15,12 @@ class Nav {
             $(window).scrollTop(this.$activeElement.offset().top);
         }
 
+        // Event Listeners
         this.onClick($navbar);
         this.onClick($sidebar);
-        $(document).on('scroll', () => this.onScroll());
+        this.onScroll();
     }
-    
+
     onClick(element) {
         let { $navbar, $sidebar } = this;
         let $activeVal = $('.active-link').attr('href');
@@ -45,13 +46,17 @@ class Nav {
             }
 
             $navbar.map((i, anchor) => {
-                if (this.$activeElement.is('img')) {
-                    $(anchor).removeClass('active');
-                } else if ($(anchor).attr('href') === $activeVal || $(anchor).parent().prev().data('href') === $activeVal) {
-                    $(anchor).addClass('active');
-                    $(anchor).siblings().removeClass('active');
-                    if ($(anchor).parent().hasClass('dropdown-menu')) {
-                        $(anchor).parent().prev().addClass('active');
+                if ($(window).width() > 992) {
+                    if (this.$activeElement.is('img')  || this.$activeElement.hasClass('dropdown-toggle')) {
+                        $(anchor).removeClass('active');
+                    } else if ($(anchor).attr('href') === $activeVal || $(anchor).parent().prev().data('href') === $activeVal) {
+                        $(anchor).addClass('active');
+                        $(anchor).siblings().removeClass('active');
+                        if ($(anchor).parent().hasClass('dropdown-menu')) {
+                            $(anchor).parent().prev().addClass('active');
+                        }
+                    } else {
+                        $(anchor).removeClass('active');
                     }
                 } else {
                     $(anchor).removeClass('active');
@@ -71,25 +76,27 @@ class Nav {
     }
 
     onScroll() {
-        if (this.$activeElement) {
-            this.$activeElement = null;
-        } else {
-            // at top remove active class from all nav items
-            $('nav a.active').removeClass('active');
-            $('.sidebar-nav a.active').removeClass('active');
+        $(document).on('scroll', () => {
+            if (this.$activeElement) {
+                this.$activeElement = null;
+            } else {
+                // at top remove active class from all nav items
+                $('nav a.active').removeClass('active');
+                $('.sidebar-nav a.active').removeClass('active');
 
-            $('main .section').map((i, section) => {
-                if ($(section).position().top <= $(document).scrollTop() - 200) {
-                    // navbar
-                    $('nav a.active').removeClass('active');
-                    $('nav a').eq(i).addClass('active');
+                $('main .section').map((i, section) => {
+                    if ($(section).position().top <= $(document).scrollTop() - 200) {
+                        // navbar
+                        $('nav a.active').removeClass('active');
+                        $('nav a').eq(i).addClass('active');
 
-                    // sidebar
-                    $('.sidebar-nav a.active').removeClass('active');
-                    $('.sidebar-nav a').eq(i).addClass('active');
-                }
-            });
-        }
+                        // sidebar
+                        $('.sidebar-nav a.active').removeClass('active');
+                        $('.sidebar-nav a').eq(i).addClass('active');
+                    }
+                });
+            }
+        });
     }
 }
 

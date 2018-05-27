@@ -1,15 +1,14 @@
-.icon {
-  height: 30px;
-  width: 30px;
-}
-
 .sidebar {
   font-size: 14px;
   padding: 0;
   position: fixed;
-  right: 50px;
+  right: 0;
   top: 90px;
   width: 200px;
+
+  @media #{$very-large-up} {
+    right: 200px;
+  }
 
   .sidebar-nav {
     padding-left: 0;

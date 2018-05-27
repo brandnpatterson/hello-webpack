@@ -2,11 +2,11 @@
 
 This is a development environment that uses [Webpack](https://webpack.js.org/) to generate html, bundle preprocessed scripts / styles, and watch files to reloaded with [Webpack Dev Server](https://github.com/webpack/webpack-dev-server).
 
-It also includes a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
+This also contains a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
 
 Other core tools included are [Stylelint](https://stylelint.io/) and [ESLint.](https://eslint.org/)
 
-jQuery and Bootstrap are also included via CDN, but are not the focus of this dev environment. Feel free to use them or remove them as you go!
+jQuery and Bootstrap are also included through a CDN, but are not the focus of this dev env.
 
 ## Prerequisites
 
@@ -60,8 +60,10 @@ When adding new files, restart your server so that the new files will be watched
 * [Babel](https://babeljs.io/) - Compiles JS ES6 to ES5
 * [Webpack](https://webpack.js.org/) - Bundles files
 * [Webpack Dev Server](https://github.com/webpack/webpack-dev-server) - Local Node Server for Webpack
-* [Stylelint](https://stylelint.io/) - Lints CSS / SCSS files
 * [ESLint](https://eslint.org/) - Lints JS files
+* [Sass](https://sass-lang.com/) - CSS with superpowers
+* [Autoprefixer](https://github.com/postcss/autoprefixer) - adds vendor prefixes to CSS rules
+* [Stylelint](https://stylelint.io/) - Lints CSS / SCSS files
 
 ## Authors
 
