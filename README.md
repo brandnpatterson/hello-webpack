@@ -4,7 +4,7 @@ This is a development environment that uses [Webpack](https://webpack.js.org/) t
 
 This also contains a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
 
-Other core tools included are [Sass](https://sass-lang.com/) using the 7-1 pattern, [Autoprefixer](https://github.com/postcss/autoprefixer), [Stylelint](https://stylelint.io/), and [ESLint.](https://eslint.org/)
+Other core tools included are [Sass](https://sass-lang.com/), [Autoprefixer](https://github.com/postcss/autoprefixer), [Stylelint](https://stylelint.io/), and [ESLint.](https://eslint.org/)
 
 jQuery and Bootstrap are included through a CDN, but are not the focus of this dev env.
 
@@ -35,13 +35,19 @@ Open localhost:8080 and you will see 'Hello, Webpack' in your browser.
 
 ## Commands
 
-Use this command before deploying it to production. I used [Surge](https://surge.sh/)
+Start the dev server
+```
+npm start
+```
+
+Optimize files for to production
 ```
 npm run prod
 ```
-Use this to start the dev server
+
+Optimize files and deploy to [surge.sh](https://surge.sh/)
 ```
-npm start
+npm run deploy
 ```
 
 This is used with the other commands to remove build files
