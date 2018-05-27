@@ -19,6 +19,7 @@ class Nav {
         this.onClick($sidebar);
         $(document).on('scroll', () => this.onScroll());
     }
+    
     onClick(element) {
         let { $navbar, $sidebar } = this;
         let $activeVal = $('.active-link').attr('href');
