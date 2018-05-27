@@ -53,6 +53,53 @@
             </ul>
         </div>
     </nav>
+    <div class="d-none d-xl-block col-xl-2 bd-toc sidebar">
+        <ul class="sidebar-nav">
+            <li class="toc-entry toc-h2">
+                <a class="navbar-brand" href="#">
+                    <img class="icon" src="images/webpack.png" alt="Webpack Icon">
+                </a>
+            </li>
+            <li class="toc-entry toc-h2">
+                <a href="#prerequisites">Prerequisites</a>
+            </li>
+            <li class="toc-entry toc-h2">
+                <a href="#commands">Commands</a>
+            </li>
+            <li class="toc-entry toc-h2">
+                <a href="#livereload">Live Reload</a>
+            </li>
+            <li class="toc-entry toc-h2">
+                <a href="#builtwith">Built With</a>
+                <ul>
+                    <li class="toc-entry toc-h3">
+                        <a href="#babel">Babel</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#webpack">Webpack</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#webpackdevserver">Dev Server</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#stylelint">Stylelint</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#eslint">Eslint</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="toc-entry toc-h2">
+                <a href="#authors">Authors</a>
+            </li>
+            <li class="toc-entry toc-h2">
+                <a href="#license">License</a>
+            </li>
+            <li class="toc-entry toc-h2">
+                <a href="#acknowledgements">Acknowledgments</a>
+            </li>
+        </ul>
+    </div>
     <main id="main" role="main">
         <div class="container">
             <div class="row section hero-section">
@@ -60,7 +107,7 @@
                     <h1 class="hero-title display-5">Hello, Webpack!</h1>
                     <div class="text-area">
                         <p>
-                            This is a development environment that uses Webpack to generate html, bundle preprocessed scripts / styles, and watch files to reloaded with Webpack Dev Server.</p>
+                            This is a development environment that uses <a href="https://webpack.js.org/" target="_blank">Webpack</a> to generate html, bundle preprocessed scripts / styles, and watch files to reloaded with <a href="https://github.com/webpack/webpack-dev-server" target="_blank">Webpack Dev Server</a>.</p>
                         <p>
                             It also includes a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
                         </p>
@@ -69,53 +116,15 @@
                         <a class="btn btn-primary btn-lg" href="https://github.com/brandnpatterson/hello-webpack" target="_blank" role="button">Github Repo &raquo;</a>
                     </p>
                 </div>
-            </div>
-            <div class="d-none d-xl-block col-xl-2 bd-toc sidebar">
-                <ul class="sidebar-nav">
-                    <li class="toc-entry toc-h2">
-                        <a class="navbar-brand" href="#">
-                            <img class="icon" src="images/webpack.png" alt="Webpack Icon">
-                        </a>
-                    </li>
-                    <li class="toc-entry toc-h2">
-                        <a href="#prerequisites">Prerequisites</a>
-                    </li>
-                    <li class="toc-entry toc-h2">
-                        <a href="#commands">Commands</a>
-                    </li>
-                    <li class="toc-entry toc-h2">
-                        <a href="#livereload">Live Reload</a>
-                    </li>
-                    <li class="toc-entry toc-h2">
-                        <a href="#builtwith">Built With</a>
-                        <ul>
-                            <li class="toc-entry toc-h3">
-                                <a href="#babel">Babel</a>
-                            </li>
-                            <li class="toc-entry toc-h3">
-                                <a href="#webpack">Webpack</a>
-                            </li>
-                            <li class="toc-entry toc-h3">
-                                <a href="#webpackdevserver">Dev Server</a>
-                            </li>
-                            <li class="toc-entry toc-h3">
-                                <a href="#stylelint">Stylelint</a>
-                            </li>
-                            <li class="toc-entry toc-h3">
-                                <a href="#eslint">Eslint</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="toc-entry toc-h2">
-                        <a href="#authors">Authors</a>
-                    </li>
-                    <li class="toc-entry toc-h2">
-                        <a href="#license">License</a>
-                    </li>
-                    <li class="toc-entry toc-h2">
-                        <a href="#acknowledgements">Acknowledgments</a>
-                    </li>
-                </ul>
+                <div class="col-sm-12 col-md-10">
+                    <div class="text-area">
+                        <p>
+                            Other core tools included are <a href="https://stylelint.io/" target="_blank">Stylelint</a> and <a href="https://eslint.org/" target="_blank">ESLint.</a>
+                        <p>
+                            jQuery and Bootstrap are also included via CDN, but are not the focus of this dev environment. Feel free to use them or remove them as you go!
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">

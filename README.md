@@ -1,8 +1,12 @@
 # Hello Webpack
 
-This is a development environment that uses Webpack to generate html, bundle preprocessed scripts / styles, and watch files to reloaded with Webpack Dev Server.
+This is a development environment that uses [Webpack](https://webpack.js.org/) to generate html, bundle preprocessed scripts / styles, and watch files to reloaded with [Webpack Dev Server](https://github.com/webpack/webpack-dev-server).
 
 It also includes a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
+
+Other core tools included are [Stylelint](https://stylelint.io/) and [ESLint.](https://eslint.org/)
+
+jQuery and Bootstrap are also included via CDN, but are not the focus of this dev environment. Feel free to use them or remove them as you go!
 
 ## Prerequisites
 
