@@ -1,0 +1,19 @@
+.section {
+  h2,
+  h3 {
+    padding-top: 70px;
+  }
+}
+
+.toc-entry a {
+  color: $gray;
+
+  &:hover {
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+.footer a {
+  color: $gray;
+}

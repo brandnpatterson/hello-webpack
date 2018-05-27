@@ -124,7 +124,7 @@ module.exports = {
             disable: !isProd
         }),
         new StyleLintPlugin({
-            files: './src/sass/**/*.scss',
+            files: './src/scss/**/*.scss',
             syntax: 'scss'
         }),
     ]

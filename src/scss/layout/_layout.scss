@@ -4,12 +4,15 @@
 }
 
 .section {
-  h2,
-  h3 {
-    padding-top: 70px;
-  }
+  margin-bottom: 70px;
 }
 
 .hero-section {
   margin-top: 90px;
+
+  .hero-title,
+  .text-area {
+    margin-bottom: 50px;
+    max-width: 820px;
+  }
 }

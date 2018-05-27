@@ -18,15 +18,6 @@
 
 .sidebar .toc-entry {
   list-style-type: none;
-
-  a {
-    color: $gray;
-  }
-
-  a:hover {
-    color: $blue;
-    text-decoration: none;
-  }
 }
 
 .sidebar .toc-entry .active {

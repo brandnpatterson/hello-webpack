@@ -53,17 +53,18 @@
             </ul>
         </div>
     </nav>
-    <main role="main">
+    <main id="main" role="main">
         <div class="container">
             <div class="row section hero-section">
                 <div class="col-sm-12 col-md-10">
-                    <h1 class="display-5">Hello, Webpack!</h1>
-                    <br>
-                    <br>
-                    <p>This is a development environment that uses Webpack to generate html, bundle preprocessed scripts / styles, and watch files to reloaded with Webpack Dev Server.</p>
-                    <p>It also includes a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.</p>
-                    <br>
-                    <br>
+                    <h1 class="hero-title display-5">Hello, Webpack!</h1>
+                    <div class="text-area">
+                        <p>
+                            This is a development environment that uses Webpack to generate html, bundle preprocessed scripts / styles, and watch files to reloaded with Webpack Dev Server.</p>
+                        <p>
+                            It also includes a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
+                        </p>
+                    </div>
                     <p>
                         <a class="btn btn-primary btn-lg" href="https://github.com/brandnpatterson/hello-webpack" target="_blank" role="button">Github Repo &raquo;</a>
                     </p>
@@ -122,7 +123,7 @@
                 <div class="col-sm-12 col-md-10">
                     <div class="section">
                         <h2 id="prerequisites">Prerequisites</h2>
-                        <br>
+
                         <p>Start by cloning this repo, then run</p>
                         
                         <figure class="highlight">
@@ -148,7 +149,7 @@
                         </figure>
                         
                         <p>Open localhost:8080 and you will see 'Hello, Webpack' in your browser.</p>
-                        <br>
+
                     </div>
                     <hr>
                     <div class="section">
@@ -175,7 +176,6 @@
                             <pre><code>npm run clean</code></pre>
                         </figure>
                     </div>
-                    <br>
                     <hr>
                     <div class="section">
                         <h2 id="livereload">Live Reload</h2>
@@ -186,7 +186,6 @@
                             
                         <p>When adding new files, restart your server so that the new files will be watched.</p>
                     </div>
-                    <br>
                     <hr>
                     <div class="section">
                         <h2 id="builtwith">Built With</h2>
@@ -207,7 +206,7 @@
                                 <a href="https://eslint.org/" target="_blank">ESLint</a> - Lints JS files
                             </li>
                         </ul>
-                    </div>
+                    </div>                    
                     <hr>
                     <div class="section">
                         <h2 id="authors">Authors</h2>
