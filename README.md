@@ -4,9 +4,10 @@ This is a development environment that uses [Webpack](https://webpack.js.org/) t
 
 This also contains a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
 
-Other core tools included are [Stylelint](https://stylelint.io/) and [ESLint.](https://eslint.org/)
+Other core tools included are [Sass](https://sass-lang.com/) using the 7-1 pattern, [Autoprefixer](https://github.com/postcss/autoprefixer), [Stylelint](https://stylelint.io/), and [ESLint.](https://eslint.org/)
 
-jQuery and Bootstrap are also included through a CDN, but are not the focus of this dev env.
+jQuery and Bootstrap are included through a CDN, but are not the focus of this dev env.
+
 
 ## Prerequisites
 
@@ -54,7 +55,7 @@ As you change files in the src folder, you will see changes reflected in the bro
 
 ## Built With
 
-* [Babel](https://babeljs.io/) - Compiles JS ES6 to ES5
+* [Babel](https://babeljs.io/) - Compiles JS ES6 to ES5 (polyfills included)
 * [Webpack](https://webpack.js.org/) - Bundles files
 * [Webpack Dev Server](https://github.com/webpack/webpack-dev-server) - Local Node Server for Webpack
 * [ESLint](https://eslint.org/) - Lints JS files
@@ -72,5 +73,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* **Billie Thompson** - [README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) - [PurpleBooth Github](https://github.com/PurpleBooth)
-* **Ken Wheeler** - [Medium Post on Open Soruce](https://medium.com/@ken_wheeler/a-bitter-guide-to-open-source-a8e3b6a3c1c4) - [kenwheeler Github](https://github.com/kenwheeler)
+* **Billie Thompson** - [PurpleBooth Github](https://github.com/PurpleBooth) - [README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+* **Ken Wheeler** - [kenwheeler Github](https://github.com/kenwheeler) - [Medium Post on Open Soruce](https://medium.com/@ken_wheeler/a-bitter-guide-to-open-source-a8e3b6a3c1c4)
