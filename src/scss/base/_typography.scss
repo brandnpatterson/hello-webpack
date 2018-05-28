@@ -7,6 +7,13 @@
   }
 }
 
+.section {
+  // add padding to allow navigation to work correctly
+  h2 {
+    padding-top: 70px;
+  }
+}
+
 .footer a {
   color: $gray;
 }

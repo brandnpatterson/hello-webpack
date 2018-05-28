@@ -1,5 +1,3 @@
 import '../scss/style.scss';
-import Nav from './components/nav';
+import './components/nav';
 
-let nav = new Nav;
-nav.init();

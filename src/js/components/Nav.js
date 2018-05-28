@@ -100,4 +100,5 @@ class Nav {
     }
 }
 
-export default Nav;
+let nav = new Nav;
+nav.init();
