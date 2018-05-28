@@ -6,10 +6,6 @@
   top: 90px;
   width: 200px;
 
-  @media #{$very-large-up} {
-    right: 200px;
-  }
-
   .sidebar-nav {
     padding-left: 0;
   }
