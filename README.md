@@ -80,4 +80,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * **Billie Thompson** - [PurpleBooth Github](https://github.com/PurpleBooth) - [README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* **Ken Wheeler** - [kenwheeler Github](https://github.com/kenwheeler) - [A Bitter Guide To Open Source](https://medium.com/@ken_wheeler/a-bitter-guide-to-open-source-a8e3b6a3c1c4)
+* **Ken Wheeler** - [kenwheeler github](https://github.com/kenwheeler) - [A Bitter Guide To Open Source](https://medium.com/@ken_wheeler/a-bitter-guide-to-open-source-a8e3b6a3c1c4)
+* **Ryan Florence** - [ryanflorence github](https://github.com/ryanflorence) - [Inspiring Tweet](https://twitter.com/ryanflorence/status/999455165240393728)
