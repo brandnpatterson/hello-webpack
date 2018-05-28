@@ -6,6 +6,7 @@ class Nav {
         this.$activeElement = null;
         this.$navbar = $('#navbar-container a');
         this.$sidebar = $('.sidebar-nav a');
+        this.$navbarIcon = $('.navbar .icon');
     }
 
     init() {
@@ -22,7 +23,7 @@ class Nav {
     }
 
     onClick(element) {
-        let { $navbar, $sidebar } = this;
+        let { $navbar, $navbarIcon, $sidebar } = this;
         let $activeVal = $('.active-link').attr('href');
         let $navbarContainer = $('.navbar-container');
 
@@ -36,7 +37,7 @@ class Nav {
             this.$activeElement = $(e.target);
 
             // assign active value from child anchor, not dropdown parent
-            if (!$(e.target).hasClass('dropdown-toggle')) {
+            if ($(e.target).hasClass('dropdown-toggle') === false) {
                 $activeVal = $(e.target).attr('href');
 
                 // remove dropdown on mobile selection
@@ -72,6 +73,12 @@ class Nav {
                     $(anchor).removeClass('active');
                 }
             });
+        });
+
+        $navbarIcon.on('click', () => {
+            if ($navbarContainer.hasClass('show')) {
+                $navbarContainer.removeClass('show');
+            }
         });
     }
 
