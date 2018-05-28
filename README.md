@@ -1,6 +1,6 @@
 # Hello Webpack
 
-This is a development environment that uses [Webpack](https://webpack.js.org/) to generate html, bundle preprocessed scripts / styles, and watch files to reloaded with [Webpack Dev Server](https://github.com/webpack/webpack-dev-server).
+This is a development environment that uses [Webpack](https://webpack.js.org/) to generate html, bundle preprocessed scripts / styles, and watch them with [Webpack Dev Server](https://github.com/webpack/webpack-dev-server) hot reload.
 
 This also contains a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
 
@@ -11,13 +11,13 @@ jQuery and Bootstrap are included through a CDN, but are not the focus of this d
 
 ## Prerequisites
 
-Start by cloning this repo, and run
+Start by cloning this repo and cd to it
 
 ```
 cd hello-webpack
 ```
 
-remove the git files from this project to make it your own
+remove the git files from this project to use it in your own github repo
 ```
 rm -rf .git
 ```
@@ -31,7 +31,7 @@ and start the dev server
 npm start
 ```
 
-Open localhost:8080 and you will see 'Hello, Webpack' in your browser.
+Open localhost:8080 and you will see 'Hello, Webpack!' in your browser.
 
 ## Commands
 
@@ -57,7 +57,7 @@ npm run clean
 
 ## Live Reload
 
-As you change files in the src folder, you will see changes reflected in the browser.
+As you change files in the src folder, you'll see the changes reflected in your browser! Cool 😎!
 
 ## Built With
 
