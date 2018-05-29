@@ -6,8 +6,6 @@ This also contains a production environment that minifies JS and uses Extract Te
 
 Other core tools included are [Sass](https://sass-lang.com/), [Autoprefixer](https://github.com/postcss/autoprefixer), [Stylelint](https://stylelint.io/), and [ESLint.](https://eslint.org/)
 
-jQuery and Bootstrap are included through a CDN, but are not the focus of this dev env.
-
 
 ## Prerequisites
 
