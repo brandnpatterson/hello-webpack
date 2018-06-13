@@ -1,74 +1,10 @@
-let webpack = require('webpack');
-let path = require('path');
-let ExtractTextPlugin = require('extract-text-webpack-plugin');
-let HtmlWebpackPlugin = require('html-webpack-plugin');
-let StyleLintPlugin = require('stylelint-webpack-plugin');
-let autoprefixer = require('autoprefixer');
-let isProd = process.env.NODE_ENV === 'production';
-let htmlTitle = 'Hello Webpack';
-
-let cssDev = [
-    {
-        loader: 'style-loader',
-    }, {
-        loader: 'css-loader',
-        options: {
-            url: false,
-            minimize: true,
-            sourceMap: true
-        }
-    },
-    {
-        loader: 'postcss-loader',
-        options: {
-            plugins() {
-                return autoprefixer({
-                    browsers: 'last 2 versions'
-                });
-            },
-            sourceMap: true
-        }
-    },
-    {
-        loader: 'sass-loader',
-        options: {
-            sourceMap: true
-        }
-    }
-];
-
-let cssProd = ExtractTextPlugin.extract({
-    fallback: 'style-loader',
-    use: [
-        {
-            loader: 'css-loader',
-            options: {
-                url: false,
-                minimize: true,
-                sourceMap: true
-            }
-        },
-        {
-            loader: 'postcss-loader',
-            options: {
-                plugins() {
-                    return autoprefixer({
-                        browsers: 'last 2 versions'
-                    });
-                },
-                sourceMap: true
-            }
-        },
-        {
-            loader: 'sass-loader',
-            options: {
-                sourceMap: true
-            }
-        }
-    ]
-});
-
-let cssConfig = isProd ? cssProd : cssDev;
+let devMode = process.env.NODE_ENV !== 'production'
+let autoprefixer = require('autoprefixer')
+let htmlTitle = 'Hello Webpack'
+let path = require('path')
+let MiniCssExtractPlugin = require("mini-css-extract-plugin")
+let HtmlWebpackPlugin = require('html-webpack-plugin')
+let StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
     devServer: {
@@ -104,9 +40,19 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
-                use: cssConfig
-            },
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => [autoprefixer]
+                        }
+                    },
+                    'sass-loader'
+                ]
+            }
         ],
     },
     plugins: [
@@ -119,13 +65,13 @@ module.exports = {
             template: path.join(__dirname, '/src/') + 'template.html',
             title: htmlTitle,
         }),
-        new ExtractTextPlugin({
-            filename: 'style.css',
-            disable: !isProd
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            chunkFilename: '[id].css',
         }),
         new StyleLintPlugin({
             files: './src/scss/**/*.scss',
             syntax: 'scss'
         }),
     ]
-};
+}
