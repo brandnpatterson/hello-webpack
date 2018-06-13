@@ -1,10 +1,11 @@
-let devMode = process.env.NODE_ENV !== 'production'
 let autoprefixer = require('autoprefixer')
-let htmlTitle = 'Hello Webpack'
 let path = require('path')
 let MiniCssExtractPlugin = require("mini-css-extract-plugin")
 let HtmlWebpackPlugin = require('html-webpack-plugin')
 let StyleLintPlugin = require('stylelint-webpack-plugin')
+
+let devMode = process.env.NODE_ENV !== 'production'
+let htmlTitle = 'Hello Webpack'
 
 module.exports = {
     devServer: {
