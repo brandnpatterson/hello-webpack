@@ -2,7 +2,7 @@
 
 This is a development environment that uses [Webpack](https://webpack.js.org/) to generate html, bundle preprocessed scripts / styles, and watch them with [Webpack Dev Server](https://github.com/webpack/webpack-dev-server) hot reload.
 
-This also contains a production environment that minifies JS and uses Extract Text Webpack Plugin to generate minified CSS.
+This also contains a production environment that minifies JS and uses Mini CSS Extract Plugin to generate minified CSS.
 
 Other core tools included are [Sass](https://sass-lang.com/), [Autoprefixer](https://github.com/postcss/autoprefixer), [Stylelint](https://stylelint.io/), and [ESLint.](https://eslint.org/)
 
@@ -62,6 +62,7 @@ As you change files in the src folder, you'll see the changes reflected in your 
 * [Babel](https://babeljs.io/) - Compiles JS ES6 to ES5 (polyfills included)
 * [Webpack](https://webpack.js.org/) - Bundles files
 * [Webpack Dev Server](https://github.com/webpack/webpack-dev-server) - Local Node Server for Webpack
+* [Mini CSS Extract Plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) - Lightweight CSS extraction 
 * [ESLint](https://eslint.org/) - Lints JS files
 * [Sass](https://sass-lang.com/) - CSS with superpowers
 * [Autoprefixer](https://github.com/postcss/autoprefixer) - adds vendor prefixes to CSS rules
