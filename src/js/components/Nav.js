@@ -4,13 +4,15 @@ let $ = window.$;
 class Nav {
     constructor() {
         this.$activeElement = null;
-        this.$navbar = $('#navbar-container a');
-        this.$sidebar = $('.sidebar-nav a');
-        this.$navbarIcon = $('.navbar .icon');
+        this.$elements = {
+            $navbar: $('#navbar-container a'),
+            $navbarIcon: $('.navbar .icon'),
+            $sidebar: $('.sidebar-nav a'),
+        };
     }
 
     init() {
-        let { $navbar, $sidebar } = this;
+        let { $navbar, $sidebar } = this.$elements;
         if (location.hash) {
             this.$activeElement = $(`${location.hash}`);
             $(window).scrollTop(this.$activeElement.offset().top);
@@ -23,7 +25,7 @@ class Nav {
     }
 
     onClick(element) {
-        let { $navbar, $navbarIcon, $sidebar } = this;
+        let { $navbar, $navbarIcon, $sidebar } = this.$elements;
         let $activeVal = $('.active-link').attr('href');
         let $navbarContainer = $('.navbar-container');
 
