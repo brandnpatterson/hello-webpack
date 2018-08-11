@@ -1,25 +1,23 @@
-let autoprefixer = require('autoprefixer')
-let path = require('path')
-let MiniCssExtractPlugin = require("mini-css-extract-plugin")
-let HtmlWebpackPlugin = require('html-webpack-plugin')
-let StyleLintPlugin = require('stylelint-webpack-plugin')
-
-let devMode = process.env.NODE_ENV !== 'production'
-let htmlTitle = 'Hello Webpack'
+let autoprefixer = require('autoprefixer');
+let path = require('path');
+let MiniCssExtractPlugin = require('mini-css-extract-plugin');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let StyleLintPlugin = require('stylelint-webpack-plugin');
+let devMode = process.env.NODE_ENV === 'development';
 
 module.exports = {
+    devtool: 'source-map',
     devServer: {
         contentBase: path.join(__dirname, '/public/'),
         compress: true,
         open: true,
         stats: 'errors-only',
-        watchContentBase: true,
+        watchContentBase: true
     },
-    devtool: 'source-map',
     entry: './src/js/index.js',
     output: {
         path: path.resolve(__dirname, './public/'),
-        filename: 'bundle.js',
+        filename: 'bundle.js'
     },
     module: {
         rules: [
@@ -54,7 +52,7 @@ module.exports = {
                     'sass-loader'
                 ]
             }
-        ],
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -63,16 +61,15 @@ module.exports = {
             },
             filename: 'index.html',
             hash: true,
-            template: path.join(__dirname, '/src/') + 'template.html',
-            title: htmlTitle,
+            template: path.join(__dirname, '/src/') + 'template.html'
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
-            chunkFilename: '[id].css',
+            chunkFilename: '[id].css'
         }),
         new StyleLintPlugin({
             files: './src/scss/**/*.scss',
             syntax: 'scss'
-        }),
+        })
     ]
-}
+};
