@@ -19,13 +19,24 @@ module.exports = {
     path: path.resolve(__dirname, 'public')
   },
   module: {
+    rules: [],
     rules: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: 'eslint-loader'
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       },
-
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
