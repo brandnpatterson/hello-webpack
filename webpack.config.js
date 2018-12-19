@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -10,8 +9,7 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   devtool: isDev && 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, '/public/'),
-    hot: isDev && true
+    contentBase: path.join(__dirname, '/public/')
   },
   stats: 'minimal',
   entry: './src/js/index.js',
@@ -57,9 +55,7 @@ module.exports = {
   ]
 };
 
-if (isDev) {
-  module.exports.plugins.push(new webpack.HotModuleReplacementPlugin());
-} else {
+if (!isDev) {
   module.exports.plugins.push(
     new MiniCssExtractPlugin({
       filename: 'style.css',
