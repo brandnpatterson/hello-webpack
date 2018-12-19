@@ -1,4 +1,4 @@
-module.exports = {
+{
   env: {
     browser: true,
     commonjs: true,
@@ -12,4 +12,4 @@ module.exports = {
     'no-console': 'off',
     'linebreak-style': ['error', 'unix']
   }
-};
+}
