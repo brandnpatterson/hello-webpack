@@ -25,17 +25,17 @@ module.exports = {
         enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'eslint-loader'
+        use: {
+          loader: 'eslint-loader',
+          options: {
+            failOnError: true
+          }
+        }
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+        use: 'babel-loader'
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -45,7 +45,7 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [autoprefixer]
+              plugins: [autoprefixer]
             }
           },
           'sass-loader'
