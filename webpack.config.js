@@ -9,7 +9,7 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   devtool: isDev && 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, '/public/')
+    contentBase: path.resolve(__dirname, 'public')
   },
   stats: 'minimal',
   entry: './src/js/index.js',
