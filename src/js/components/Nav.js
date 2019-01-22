@@ -1,14 +1,12 @@
 let $ = window.$;
 
-class Nav {
-  constructor() {
-    this.$activeElement = null;
-    this.$elements = {
-      $navbar: $('#navbar-container a'),
-      $navbarIcon: $('.navbar .icon'),
-      $sidebar: $('.sidebar-nav a')
-    };
-  }
+const nav = {
+  $activeElement: null,
+  $elements: {
+    $navbar: $('#navbar-container a'),
+    $navbarIcon: $('.navbar .icon'),
+    $sidebar: $('.sidebar-nav a')
+  },
 
   init() {
     let { $navbar, $sidebar } = this.$elements;
@@ -21,7 +19,7 @@ class Nav {
     this.onClick($navbar);
     this.onClick($sidebar);
     this.onScroll();
-  }
+  },
 
   onClick(element) {
     let { $navbar, $navbarIcon, $sidebar } = this.$elements;
@@ -99,7 +97,7 @@ class Nav {
         $navbarContainer.removeClass('show');
       }
     });
-  }
+  },
 
   onScroll() {
     $(document).on('scroll', () => {
@@ -128,7 +126,6 @@ class Nav {
       }
     });
   }
-}
+};
 
-let nav = new Nav();
 nav.init();
