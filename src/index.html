@@ -10,14 +10,23 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="<%=require('./images/favicon-96x96.png')%>"
+    />
     <title>Hello Webpack</title>
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="#">
-        <img class="icon" src="favicon-96x96.png" alt="Webpack Icon" />
+        <img
+          class="icon"
+          src="<%=require('./images/favicon-96x96.png')%>"
+          alt="Webpack Icon"
+        />
       </a>
       <button
         class="navbar-toggler"
@@ -87,7 +96,11 @@
       <ul class="sidebar-nav">
         <li class="toc-entry toc-h2">
           <a class="navbar-brand" href="#">
-            <img class="icon" src="favicon-96x96.png" alt="Webpack Icon" />
+            <img
+              class="icon"
+              src="<%=require('./images/favicon-96x96.png')%>"
+              alt="Webpack Icon"
+            />
           </a>
         </li>
         <li class="toc-entry toc-h2">
@@ -196,21 +209,18 @@
                   remove the git files from this project to use it in your own
                   github repo
                 </p>
-
                 <figure class="highlight">
                   <pre><code>rm -rf .git</code></pre>
                 </figure>
               </div>
               <div class="code-section">
                 <p>then</p>
-
                 <figure class="highlight">
                   <pre><code>npm install</code></pre>
                 </figure>
               </div>
               <div class="code-section">
                 <p>and start the dev server</p>
-
                 <figure class="highlight">
                   <pre><code>npm start</code></pre>
                 </figure>
