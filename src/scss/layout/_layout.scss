@@ -22,6 +22,12 @@
   width: 30px;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 .github-buttons {
   margin-bottom: 48px;
+  min-height: 32px;
+  transition: opacity 0.25s;
 }
